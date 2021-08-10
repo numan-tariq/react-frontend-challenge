@@ -1,18 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Row, Col } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-import { connect, useSelector } from "react-redux";
-import { addData } from "../store/actions/dataAction";
+import { connect } from "react-redux";
+import { addData } from "../../store/actions/dataAction";
 
 const { Meta } = Card;
 
 const SearchResult = (props) => {
-
   const { addData } = props;
-  const { appData } = useSelector((state) => state);
-
-  console.log(appData.urls);
-
   const urlData = props.imageURL;
 
   return (
@@ -35,6 +30,14 @@ const SearchResult = (props) => {
                   key="add"
                   onClick={() => {
                     addData(url);
+                    localStorage.setItem(
+                      "BreedCollection",
+                      JSON.stringify(
+                        JSON.parse(
+                          localStorage.getItem("BreedCollection")
+                        ).concat(url)
+                      )
+                    );
                   }}
                 />,
               ]}

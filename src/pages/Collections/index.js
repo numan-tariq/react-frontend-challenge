@@ -1,5 +1,5 @@
 import React from "react";
-import CollectionCard from "../components/CollectionCard";
+import CollectionCard from "../../components/CollectionCard/";
 
 const Collections = () => {
   return (

@@ -1,7 +1,7 @@
 import { Route, Switch, Redirect } from "react-router-dom";
-import MainHeader from "./components/MainHeader";
-import Collections from "./pages/Collections";
-import Welcome from "./pages/Welcome";
+import MainHeader from "./components/MainHeader/";
+import Collections from "./pages/Collections/";
+import Welcome from "./pages/Welcome/";
 
 function App() {
   return (

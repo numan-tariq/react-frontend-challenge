@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBreed from "../components/SearchBreed";
+import SearchBreed from "../../components/SearchBreed/";
 
 const Welcome = () => {
   return (

@@ -13,3 +13,4 @@ export const removeData =  (url) => dispatch => {
     payload: url,
   })
 }
+
